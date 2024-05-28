@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trailers</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img
+          src="/images/Despicable_Me_logo.png"
+          alt="Movie Booking Website Logo"
+        />
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="trailers.html">Trailers</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="reviews.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Buttons with ids so pop-up is displayed on click -->
+      <section class="section-booking">
+        <h1>Discover Your Despicable Cinematic Adventure</h1>
+        <div>
+          <button class="button-booking" id="buttonbooking1">
+            <img src="/images/1.jpg" alt="Despicable Me" />
+            <p>Despicable Me (2010)</p>
+          </button>
+
+          <button class="button-booking" id="buttonbooking2">
+            <img src="/images/2.jpg" alt="Despicable Me 2" />
+            <p>Despicable Me 2 (2013)</p>
+          </button>
+
+          <button class="button-booking" id="buttonbooking3">
+            <img src="/images/minions.jpg" alt="Minions" />
+            <p>Minions (2015)</p>
+          </button>
+
+          <button class="button-booking" id="buttonbooking4">
+            <img src="/images/3.jpg" alt="Despicable Me 3" />
+            <p>Despicable Me 3 (2017)</p>
+          </button>
+
+          <button class="button-booking" id="buttonbooking5">
+            <img src="/images/rise.jpg" alt="Minons: The Rise of Gru" />
+            <p>Minions: The Rise of Gru (2022)</p>
+          </button>
+
+          <button class="button-booking" id="buttonbooking6">
+            <img src="/images/4.jpg" alt="Despicable Me 4" />
+            <p>Despicable Me 4 (2024)</p>
+          </button>
+        </div>
+      </section>
+
+      <br />
+      <br />
+
+      <!-- Schedule -->
+      <section class="section-showtime">
+        <h1>Check Out Despicable Schedule</h1>
+        <table class="table-booking">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Title of the Movie</th>
+              <th>Show Time</th>
+              <th>Theatre</th>
+              <th>Ticket Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Despicable Me 1 (2010)</td>
+              <td>10 00 to 12 00</td>
+              <td>Theatre 1</td>
+              <td>
+                Standard - £10 <br />
+                VIP - £14
+              </td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Despicable Me 2 (2013)</td>
+              <td>11 00 to 13 00</td>
+              <td>Theatre 2</td>
+              <td>
+                Standard - £10 <br />
+                VIP - £14
+              </td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>Minions (2015)</td>
+              <td>10 00 to 12 00</td>
+              <td>Theatre 3</td>
+              <td>
+                Standard - £11 <br />
+                VIP - £15
+              </td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>Despicable Me 3 (2017)</td>
+              <td>12 00 to 14 00</td>
+              <td>Theatre 4</td>
+              <td>
+                Standard - £10 <br />
+                VIP - £14
+              </td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td>Minions: The Rise of Gru (2022)</td>
+              <td>13 00 to 15 00</td>
+              <td>Theatre 5</td>
+              <td>
+                Standard - £13 <br />
+                VIP - £17
+              </td>
+            </tr>
+
+            <tr>
+              <td>6</td>
+              <td>Despicable Me 4 (2024)</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>
+                Standard - £15 <br />
+                VIP - £20
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Pop Up Form, display hidden in CSS -->
+
+    <div class="popup-container" id="popupcontainer">
+      <div class="popup-form">
+        <h1>Secure Your Despicable Seat</h1>
+        <form>
+          <fieldset class="fieldset">
+            <legend>Enter Your Despicable Information</legend>
+
+            <label for="name">Your name</label>
+            <input type="text" id="name" placeholder="Your name" />
+
+            <br />
+
+            <label for="date">Date</label>
+            <input type="date" id="date" />
+
+            <br />
+
+            <label for="email">Your email</label>
+            <input type="email" id="email" placeholder="Your email" />
+
+            <br />
+
+            <!-- call validate for form validation upon clicking -->
+            <button type="button" onclick="validate()" id="submit">
+              Submit
+            </button>
+            <p id="validator"></p>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // when buttons are pressed, pop-up appears
+      document
+        .getElementById("buttonbooking1")
+        .addEventListener("click", () => {
+          document.getElementById("popupcontainer").style.display = "flex";
+        });
+
+      document
+        .getElementById("buttonbooking2")
+        .addEventListener("click", () => {
+          document.getElementById("popupcontainer").style.display = "flex";
+        });
+
+      document
+        .getElementById("buttonbooking3")
+        .addEventListener("click", () => {
+          document.getElementById("popupcontainer").style.display = "flex";
+        });
+
+      document
+        .getElementById("buttonbooking4")
+        .addEventListener("click", () => {
+          document.getElementById("popupcontainer").style.display = "flex";
+        });
+
+      document
+        .getElementById("buttonbooking5")
+        .addEventListener("click", () => {
+          document.getElementById("popupcontainer").style.display = "flex";
+        });
+
+      document
+        .getElementById("buttonbooking6")
+        .addEventListener("click", () => {
+          document.getElementById("popupcontainer").style.display = "flex";
+        });
+
+      // upon submitting, validate the form, ie, name and date is required // I made email optional here.
+      document.getElementById("submit").addEventListener("click", () => {
+        validate();
+        let name = document.getElementById("name").value;
+        let date = document.getElementById("date").value;
+        if (name !== "" && date !== "") {
+          document.getElementById("popupcontainer").style.display = "none";
+        }
+      });
+
+      // define the validate function
+
+      function validate() {
+        let x = document.getElementById("name").value;
+        let y = document.getElementById("date").value;
+        let text;
+        if (x == "" && y == "")
+          text = "Your Name & Date required"; //they didnt fill, show text
+        else if (x == "") {
+          text = "Your Name Required!";
+        } else if (y == "") {
+          text = "Date Required";
+        } else text = " ";
+
+        document.getElementById("validator").innerHTML = text;
+      }
+    </script>
+
+    <br />
+    <br />
+    <footer>
+      <p>
+        &copy; Despicable Me Movie Booking Website By
+        ZarniKaungHtutKyaw_101064447
+      </p>
+    </footer>
+
+    <!-- walking icon -->
+
+    <button id="walker" onclick="myMove()">
+      <img src="/images/png3.png" alt="" />
+    </button>
+    <br />
+
+    <script src="/script.js"></script>
+    <script>
+      // icon moves
+      var id = null;
+      function myMove() {
+        var x = document.getElementById("walker");
+        var pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 2000) clearInterval(id);
+          else {
+            pos++;
+
+            x.style.left = pos + "px";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

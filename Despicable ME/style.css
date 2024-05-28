@@ -1,0 +1,394 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  background-color: #000000;
+}
+
+.notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffa500, #00000000);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to bottom, #ffa500, #000000);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff6e6f8;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff8c00;
+}
+
+/* HOME */
+
+.section-home {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("/images/background.JPG");
+  background-size: cover;
+  background-position: center;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.home {
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 48px;
+}
+
+.home p {
+  font-size: 20px;
+}
+
+.buttons-home {
+  margin-top: 30px;
+}
+
+.buttons-home button,
+select {
+  margin: 15px;
+  padding: 10px 20px;
+  font-size: 26px;
+  color: #fff;
+  background-color: #ffa500;
+  border: none;
+  transition: all 0.3s;
+}
+
+.buttons-home select {
+  padding-left: 50px;
+  appearance: none;
+}
+
+.buttons-home select option {
+  font-size: 20px;
+}
+
+.buttons-home button:hover,
+select:hover,
+.buttons-home select option:hover {
+  transform: translateY(-3px);
+  background-color: #ef8809;
+}
+
+.buttons-home button:active,
+select:active {
+  transform: scale(1.03);
+  background-color: #ef8809;
+}
+
+/* ########################################################################## */
+
+/* Trailers */
+
+.trailers-h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.section-trailers {
+  display: flex;
+  align-items: center;
+}
+
+.trailers-img {
+  margin-right: 50px;
+}
+
+.trailers-img img {
+  margin: 50px 120px 50px 120px;
+  width: 300px;
+  height: 400px;
+}
+
+.trailers-text h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.embed-vid {
+  width: 500px;
+  height: 250px;
+}
+
+.vid-player {
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.vid-player:hover {
+  transform: scale(0.98);
+  background-color: #ffa500;
+}
+
+.vid-player:active {
+  transform: scale(1.05);
+}
+
+/* ########################################################################## */
+
+/* Showtime */
+
+.table-booking {
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("/images/background2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.table-booking th,
+td {
+  /* border: 1px solid #ddd; */
+  padding: 15px;
+  font-size: 20px;
+}
+
+/* Buy ticket */
+.section-booking {
+  padding: 20px;
+  text-align: center;
+}
+
+.section-booking div {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.section-booking div::-webkit-scrollbar {
+  height: 12px;
+}
+
+/* Background of scrollbar */
+.section-booking div::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 10px;
+}
+
+/* Bar of scrollbar */
+.section-booking div::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.button-booking {
+  padding: 10px;
+  transition: all 0.5s;
+  border-radius: 15px;
+  margin: 10px 2px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+}
+
+.button-booking:hover {
+  transform: scale(0.98);
+  background-color: #ef8809;
+}
+
+.button-booking:active {
+  transform: scale(1.05);
+  background-color: #ef8809;
+}
+
+.button-booking img {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.button-booking p {
+  font-size: 16px;
+}
+
+.section-showtime h1,
+.section-booking h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* Pop Up Form */
+.popup-container {
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 400px;
+  height: 400px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.popup-form {
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.fieldset,
+.fieldset label,
+.fieldset input,
+.fieldset button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.fieldset input:hover {
+  border: 2px solid #ef8809;
+}
+
+.fieldset button:hover {
+  background-color: #ef8809;
+  transform: translateY(-4px);
+}
+
+.fieldset button {
+  font-size: 20px;
+}
+
+/* ########################################################################## */
+
+/* Reviews */
+
+.reviews-h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.section-reviews {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.reviews-img {
+  margin-right: 50px;
+}
+
+.reviews-img img {
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.reviews-text {
+  text-align: left;
+}
+
+.reviews-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.reviews-text p {
+  line-height: 22px;
+}
+
+/* ########################################################################## */
+
+/* FAQ */
+
+.faq {
+  line-height: 20px;
+}
+
+.faq h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq h2 {
+  font-size: 26px;
+  margin: 20px;
+}
+
+.faq-dl {
+  margin-left: 20px;
+}
+
+.faq-dl dt {
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.faq-dl dd {
+  margin: 20px 0 o 20px;
+}
+
+/* ########################################################################## */
+
+#walker {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: #00000000;
+  border: none;
+}
+
+#walker img {
+  width: 100px;
+  height: auto;
+}

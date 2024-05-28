@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trailers</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img
+          src="/images/Despicable_Me_logo.png"
+          alt="Movie Booking Website Logo"
+        />
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="trailers.html">Trailers</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="reviews.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="faq">
+      <h1>Frequently Asked Questions</h1>
+
+      <br />
+      <br />
+
+      <!-- used dl, dt, dd for faq a/c what i found on internet,,, description list,term,definition  -->
+      <h2>About the Movies</h2>
+      <dl class="faq-dl">
+        <dt>What is the chronological order of the Despicable Me movies?</dt>
+        <dd>
+          The Despicable Me movies should be watched in this order: Despicable
+          Me (2010), Despicable Me 2 (2013), Minions (2015), Despicable Me 3
+          (2017), Minions: The Rise of Gru (2022), and Despicable Me 4 (2024).
+        </dd>
+
+        <br />
+
+        <dt>Who are the main characters in the Despicable Me series?</dt>
+        <dd>
+          The main characters include Gru, voiced by Steve Carell, his adopted
+          daughters Margo, Edith, and Agnes, the Minions (Kevin, Bob, and
+          Stuart), Lucy Wilde, and Dr. Nefario.
+        </dd>
+
+        <br />
+
+        <dt>What is the main plot of the Despicable Me series?</dt>
+        <dd>
+          The series follows Gru, a supervillain who adopts three orphaned girls
+          as part of a plan to steal the moon. Over time, he grows to love the
+          girls and transforms from a villain into a devoted father.
+        </dd>
+      </dl>
+
+      <br />
+      <br />
+
+      <h2>Streaming and Merchandise</h2>
+      <dl class="faq-dl">
+        <dt>Where can I stream or purchase the Despicable Me movies?</dt>
+        <dd>
+          The Despicable Me movies are available on various streaming platforms
+          such as Netflix, Amazon Prime Video, and Hulu. They can also be
+          purchased on digital stores like iTunes, Google Play, and Amazon.
+        </dd>
+
+        <br />
+
+        <dt>
+          Are there any video games or merchandise based on the Despicable Me
+          series?
+        </dt>
+        <dd>
+          Yes, there are several video games, toys, clothing, and other
+          merchandise based on the Despicable Me series. Popular games include
+          Despicable Me: Minion Rush and various mobile apps. You can find
+          official merchandise at major retailers and online stores.
+        </dd>
+      </dl>
+
+      <br />
+      <br />
+
+      <h2>Characters and Minions</h2>
+      <dl class="faq-dl">
+        <dt>Who voices the character of Gru in the Despicable Me series?</dt>
+        <dd>
+          The character of Gru is voiced by Steve Carell, who brings a unique
+          and memorable performance to the role.
+        </dd>
+
+        <br />
+
+        <dt>How many Minions are there, and do they have names?</dt>
+        <dd>
+          There are hundreds of Minions, each with their own unique
+          personalities. Some of the main Minions with names include Kevin, Bob,
+          Stuart, Dave, and Jerry. These characters often take on significant
+          roles in the movies.
+        </dd>
+
+        <br />
+
+        <dt>What makes the Minions so popular?</dt>
+        <dd>
+          The Minions are beloved for their playful, mischievous nature, their
+          unique language (Minionese), and their hilarious, slapstick humor.
+          Their childlike innocence and loyalty to Gru also endear them to
+          audiences of all ages.
+        </dd>
+      </dl>
+    </main>
+
+    <br />
+    <br />
+    <footer>
+      <p>
+        &copy; Despicable Me Movie Booking Website By
+        ZarniKaungHtutKyaw_101064447
+      </p>
+    </footer>
+
+    <button id="walker" onclick="myMove()">
+      <img src="/images/png5.png" alt="" />
+    </button>
+    <br />
+
+    <script src="/script.js"></script>
+    <script>
+      var id = null;
+      function myMove() {
+        var x = document.getElementById("walker");
+        var pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 2000) clearInterval(id);
+          else {
+            pos++;
+
+            x.style.left = pos + "px";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
